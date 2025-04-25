@@ -1,0 +1,1 @@
+(f"{Fore.GREEN}>>>{Fore.RESET} {name}: {', '.join(phones)}")
