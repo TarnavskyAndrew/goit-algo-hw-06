@@ -1,5 +1,5 @@
-from Phone import Phone
-from Name import Name
+from models.Phone import Phone
+from models.Name import Name
 from colorama import Fore
 
 
@@ -20,9 +20,9 @@ class Record:
         for i, phone in enumerate(self.phones):
             if phone.value == phone_str:
                 removed = self.phones.pop(i)                
-                print(f">>> DELETED phone = {phone}")
+                print(f"{Fore.YELLOW}>>> DELETED phone = {phone} {Fore.RESET}")
                 return
-        print(f"Phone '{phone_str}' not found.")
+        print(f"{Fore.RED}!!! Phone '{phone_str}' not found.{Fore.RESET}")
         return None            
             
     def edit_phone(self, old, new): # замінює телефон, інакше `ValueError
@@ -34,9 +34,7 @@ class Record:
                 return
         raise ValueError(f"{Fore.RED}!!! Phone number {old} not found.{Fore.RESET}")
     
-
-    
-    
+        
     def find_phone(self, phone_str): #повертає `Phone` або None
         
         for phone in self.phones:

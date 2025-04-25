@@ -1,4 +1,4 @@
-from Field import Field
+from models.Field import Field
 
 # 3. Клас телефону з валідацією номера (10 цифр)
 class Phone(Field):

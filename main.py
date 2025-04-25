@@ -1,5 +1,5 @@
-from AddressBook import AddressBook
-from Record import Record
+from models.AddressBook import AddressBook
+from models.Record import Record
 from colorama import Fore
 
 
@@ -7,13 +7,14 @@ from colorama import Fore
 def main():
     
     print(f"{Fore.GREEN}>>>{Fore.RESET}"*30) 
-    
+     
     book = AddressBook()
     rec = Record("Anatoliy")
        
     # Додамо телефони 
     rec.add_phone("1234567890")
     rec.add_phone("0987654321")
+    rec.add_phone("1112223331")
  
     # Додамо запис до книги 
     book.add_record(rec)
@@ -26,7 +27,7 @@ def main():
     print(f"{Fore.GREEN}>>>{Fore.RESET} FOUND PHONE:", phone)
 
     # Редагувати номер 
-    rec.edit_phone("1234567890", "1112223333")
+    rec.edit_phone("1234567890", "0502577755")
 
     # Видалити номер 
     rec.remove_phone("0987654321")
