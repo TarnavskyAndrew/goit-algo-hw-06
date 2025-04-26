@@ -1,5 +1,5 @@
 from collections import UserDict
-from colorama import Fore
+# from colorama import Fore
 
 #  5. Адресна книга: зберігає всі записи
 class AddressBook(UserDict): 
@@ -13,11 +13,12 @@ class AddressBook(UserDict):
     def delete(self, name): # видаляє на ім'я 
         
         if name in self.data:
-            removed = self.data[name]
+            # removed = self.data[name]
             del self.data[name]
-            print(f"{Fore.YELLOW}>>> DELETED {removed}{Fore.RESET}")
+            # print(f"{Fore.YELLOW}>>> DELETED {removed}{Fore.RESET}")
         else:                
-            print(f"{Fore.RED}!!! Contact name: '{name}' not found.{Fore.RESET}")
+            # print(f"{Fore.RED}!!! Contact name: '{name}' not found.{Fore.RESET}")
+            print(f"Contact '{name}' not found.")
             return None  
     
     def __str__(self):
